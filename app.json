@@ -1,8 +1,8 @@
 {
-    "name":"V2Ray-Heroku",
-    "description":"在Heroku上部署V2ray。",
+    "name":"v-2-h",
+    "description":"V-2-H",
     "keywords":[
-        "V2Ray"
+        "v-2-h"
     ],
     "env":{
         "APPNAME":{
@@ -22,7 +22,7 @@
             "value":"/ws"
         }
     },
-    "website":"https://github.com/ap10001/v2ray-heroku/",
-    "repository":"https://github.com/ap10001/v2ray-heroku/",
+    "website":"https://github.com/ap10001/v-2-h/",
+    "repository":"https://github.com/ap10001/v-2-h/",
     "stack":"container"
 }

@@ -5,6 +5,10 @@
         "V2Ray"
     ],
     "env":{
+        "APPNAME":{
+            "description":"应用名称",
+            "value":""
+        },
         "PORT":{
             "description":"端口",
             "value":"443"

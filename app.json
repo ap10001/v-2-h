@@ -1,14 +1,20 @@
 {
-	"name": "V2Ray",
-	"description": "Deploy V2ray on Heroku.",
-	"keywords": ["V2Ray"],
-	"env": {
-		"UUID": {
-			"description": "V2Ray UUID",
-			"value": "ad806487-2d26-4636-98b6-ab85cc8521f7"
-		}
-	},
-	"website": "https://ibcl.us/Heroku-V2Ray_20191014/",
-	"repository": "https://github.com/bclswl0827/v2ray-heroku",
-	"stack": "container"
+    "name":"V2Ray-Heroku",
+    "description":"在Heroku上部署V2ray。",
+    "keywords":[
+        "V2Ray"
+    ],
+    "env":{
+        "PORT":{
+            "description":"V2Ray端口",
+            "value":"443"
+        },
+        "UUID":{
+            "description":"V2Ray UUID",
+            "value":"ad806487-2d26-4636-98b6-ab85cc8521f7"
+        }
+    },
+    "website":"https://github.com/ap10001/v2ray-heroku/",
+    "repository":"https://github.com/ap10001/v2ray-heroku/",
+    "stack":"container"
 }

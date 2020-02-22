@@ -16,6 +16,10 @@
         "UUID":{
             "description":"UUID",
             "value":"ad806487-2d26-4636-98b6-ab85cc8521f7"
+        },
+        "PATH":{
+            "description":"路径",
+            "value":"/ws"
         }
     },
     "website":"https://github.com/ap10001/v2ray-heroku/",

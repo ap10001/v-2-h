@@ -6,11 +6,11 @@
     ],
     "env":{
         "PORT":{
-            "description":"V2Ray端口",
+            "description":"端口",
             "value":"443"
         },
         "UUID":{
-            "description":"V2Ray UUID",
+            "description":"UUID",
             "value":"ad806487-2d26-4636-98b6-ab85cc8521f7"
         }
     },

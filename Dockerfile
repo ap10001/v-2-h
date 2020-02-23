@@ -22,11 +22,14 @@ RUN echo $(curl https://install.direct/go.sh | bash)
 # CMD echo $(/configure.sh)
 
 # 执行
-RUN echo $'' >> /etc/v2ray/config.json
+# RUN echo $'' >> /etc/v2ray/config.json
+
+# 复制config.json文件
+ADD config.json /etc/v2ray/config.json
 
 # 显示config.json文件
 RUN echo $(cat /etc/v2ray/config.json)
 
-# 执行configure.sh文件
-# RUN echo $(/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json)
+# 执行
+RUN echo $(/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json)
 

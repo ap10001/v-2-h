@@ -25,7 +25,7 @@ RUN echo $(curl https://install.direct/go.sh | bash)
 # RUN echo $'' >> /etc/v2ray/config.json
 
 # 复制config.json文件
-ADD config.json /etc/v2ray/config.json
+ADD server_config.json /etc/v2ray/config.json
 
 # 显示config.json文件
 RUN echo $(cat /etc/v2ray/config.json)

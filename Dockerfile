@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM heroku/heroku:latest
 
 # 安装临时组件
 RUN echo $(apk add --no-cache --virtual .build-deps ca-certificates curl bash)

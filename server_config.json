@@ -8,7 +8,7 @@
     "inbounds":[
         {
             "tag":null,
-            "port":${PORT},
+            "port":443,
             "listen":null,
             "protocol":"vmess",
             "sniffing":null,
@@ -19,7 +19,7 @@
                 "address":null,
                 "clients":[
                     {
-                        "id":"${UUID}",
+                        "id":"ad806487-2d26-4636-98b6-ab85cc8521f7",
                         "alterId":64,
                         "email":"t@t.tt",
                         "security":null
@@ -31,15 +31,15 @@
                 "security":"tls",
                 "tlsSettings":{
                     "allowInsecure":true,
-                    "serverName":"${APPNAME}.herokuapp.com"
+                    "serverName":"h-t-b1.herokuapp.com"
                 },
                 "tcpSettings":null,
                 "kcpSettings":null,
                 "wsSettings":{
                     "connectionReuse":true,
-                    "path":"${PATH}",
+                    "path":"/ws",
                     "headers":{
-                        "Host":"${APPNAME}.herokuapp.com"
+                        "Host":"h-t-b1.herokuapp.com"
                     }
                 },
                 "httpSettings":null,

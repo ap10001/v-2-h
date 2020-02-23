@@ -33,3 +33,4 @@ RUN echo $(cat /etc/v2ray/config.json)
 # 执行
 CMD echo $(/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json)
 
+

@@ -7,7 +7,7 @@
     "env":{
         "APPNAME":{
             "description":"应用名称",
-            "value":""
+            "value":"h-t-b1"
         },
         "PORT":{
             "description":"端口",

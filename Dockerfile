@@ -19,4 +19,5 @@ ADD configure.sh /configure.sh
 RUN echo $(chmod +x /configure.sh)
 
 # 执行configure.sh文件
-CMD /configure.sh
+CMD echo $(/configure.sh)
+

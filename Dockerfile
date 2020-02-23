@@ -19,5 +19,68 @@ ADD configure.sh /configure.sh
 RUN echo $(chmod +x /configure.sh)
 
 # 执行configure.sh文件
-CMD echo $(/configure.sh)
+# CMD echo $(/configure.sh)
+
+RUN echo $(cat > /etc/v2ray/config.json <<'EOF' \
+{ \
+    "policy":null, \
+    "log":{ \
+        "access":"", \
+        "error":"", \
+        "loglevel":"warning" \
+    }, \
+    "inbounds":[ \
+        { \
+            "tag":null, \
+            "port":${PORT}, \
+            "listen":null, \
+            "protocol":"vmess", \
+            "sniffing":null, \
+            "settings":{ \
+                "auth":null, \
+                "udp":false, \
+                "ip":null, \
+                "address":null, \
+                "clients":[ \
+                    { \
+                        "id":"${UUID}", \
+                        "alterId":64, \
+                        "email":"t@t.tt", \
+                        "security":null \
+                    } \
+                ] \
+            }, \
+            "streamSettings":{ \
+                "network":"ws", \
+                "security":"tls", \
+                "tlsSettings":{ \
+                    "allowInsecure":true, \
+                    "serverName":"${APPNAME}.herokuapp.com" \
+                }, \
+                "tcpSettings":null, \
+                "kcpSettings":null, \
+                "wsSettings":{ \
+                    "connectionReuse":true, \
+                    "path":"${PATH}", \
+                    "headers":{ \
+                        "Host":"${APPNAME}.herokuapp.com" \
+                    } \
+                }, \
+                "httpSettings":null, \
+                "quicSettings":null \
+            } \
+        } \
+    ], \
+    "outbounds":null, \
+    "stats":null, \
+    "api":null, \
+    "dns":null, \
+    "routing":{ \
+        "domainStrategy":"IPIfNonMatch", \
+        "rules":[ \
+        ] \
+    } \
+} \
+EOF \
+)
 

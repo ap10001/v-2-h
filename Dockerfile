@@ -22,66 +22,7 @@ RUN echo $(curl https://install.direct/go.sh | bash)
 # CMD echo $(/configure.sh)
 
 # 执行
-RUN echo $'{\n\
-    "policy":null,\n\
-    "log":{\n\
-        "access":"",\n\
-        "error":"",\n\
-        "loglevel":"warning"\n\
-    },\n\
-    "inbounds":[\n\
-        {\n\
-            "tag":null,\n\
-            "port":${PORT},\n\
-            "listen":null,\n\
-            "protocol":"vmess",\n\
-            "sniffing":null,\n\
-            "settings":{\n\
-                "auth":null,\n\
-                "udp":false,\n\
-                "ip":null,\n\
-                "address":null,\n\
-                "clients":[\n\
-                    {\n\
-                        "id":"${UUID}",\n\
-                        "alterId":64,\n\
-                        "email":"t@t.tt",\n\
-                        "security":null\n\
-                    }\n\
-                ]\n\
-            },\n\
-            "streamSettings":{\n\
-                "network":"ws",\n\
-                "security":"tls",\n\
-                "tlsSettings":{\n\
-                    "allowInsecure":true,\n\
-                    "serverName":"${APPNAME}.herokuapp.com"\n\
-                },\n\
-                "tcpSettings":null,\n\
-                "kcpSettings":null,\n\
-                "wsSettings":{\n\
-                    "connectionReuse":true,\n\
-                    "path":"${PATH}",\n\
-                    "headers":{\n\
-                        "Host":"${APPNAME}.herokuapp.com"\n\
-                    }\n\
-                },\n\
-                "httpSettings":null,\n\
-                "quicSettings":null\n\
-            }\n\
-        }\n\
-    ],\n\
-    "outbounds":null,\n\
-    "stats":null,\n\
-    "api":null,\n\
-    "dns":null,\n\
-    "routing":{\n\
-        "domainStrategy":"IPIfNonMatch",\n\
-        "rules":[\n\
-        ]\n\
-    }\n\
-}\n'\
->> /etc/v2ray/config.json
+RUN echo $'' >> /etc/v2ray/config.json
 
 # 显示config.json文件
 RUN echo $(cat /etc/v2ray/config.json)

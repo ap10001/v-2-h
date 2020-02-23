@@ -13,15 +13,15 @@ RUN echo $(curl https://install.direct/go.sh | bash)
 # RUN echo $(rm -rf /usr/bin/v2ray/geosite.dat /usr/bin/v2ray/geoip.dat)
 
 # 复制configure.sh文件
-ADD configure.sh /configure.sh
+# ADD configure.sh /configure.sh
 
 # 更改文件权限为可执行
-RUN echo $(chmod +x /configure.sh)
+# RUN echo $(chmod +x /configure.sh)
 
 # 执行configure.sh文件
 # CMD echo $(/configure.sh)
 
-# 执行configure.sh文件
+# 执行
 RUN cat > /etc/v2ray/config.json <<'EOF' \
 { \
     "policy":null, \

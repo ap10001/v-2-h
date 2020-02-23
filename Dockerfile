@@ -1,4 +1,4 @@
-FROM heroku/heroku:latest
+FROM heroku/heroku:18
 
 # 安装临时组件
 RUN echo $(apk add --no-cache --virtual .build-deps ca-certificates curl bash)

@@ -31,5 +31,5 @@ ADD server_config.json /etc/v2ray/config.json
 RUN echo $(cat /etc/v2ray/config.json)
 
 # 执行
-RUN echo $(/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json)
+CMD echo $(/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json)
 

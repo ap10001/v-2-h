@@ -1,59 +1,25 @@
 {
-    "policy":null,
-    "log":{
-        "access":"",
-        "error":"",
-        "loglevel":"warning"
-    },
-    "inbounds":[
+  "inbounds": [
+  {
+    "port": 443,
+    "protocol": "vmess",
+    "settings": {
+      "clients": [
         {
-            "tag":null,
-            "port":443,
-            "listen":null,
-            "protocol":"vmess",
-            "sniffing":null,
-            "settings":{
-                "auth":null,
-                "udp":false,
-                "ip":null,
-                "address":null,
-                "clients":[
-                    {
-                        "id":"ad806487-2d26-4636-98b6-ab85cc8521f7",
-                        "alterId":64,
-                        "email":"t@t.tt",
-                        "security":null
-                    }
-                ]
-            },
-            "streamSettings":{
-                "network":"ws",
-                "security":"tls",
-                "tlsSettings":{
-                    "allowInsecure":true,
-                    "serverName":"h-t-b1.herokuapp.com"
-                },
-                "tcpSettings":null,
-                "kcpSettings":null,
-                "wsSettings":{
-                    "connectionReuse":true,
-                    "path":"/ws",
-                    "headers":{
-                        "Host":"h-t-b1.herokuapp.com"
-                    }
-                },
-                "httpSettings":null,
-                "quicSettings":null
-            }
+          "id": "ad806487-2d26-4636-98b6-ab85cc8521f7",
+          "alterId": 64
         }
-    ],
-    "outbounds":null,
-    "stats":null,
-    "api":null,
-    "dns":null,
-    "routing":{
-        "domainStrategy":"IPIfNonMatch",
-        "rules":[
-        ]
+      ]
+    },
+    "streamSettings": {
+      "network": "ws"
     }
+  }
+  ],
+  "outbounds": [
+  {
+    "protocol": "freedom",
+    "settings": {}
+  }
+  ]
 }

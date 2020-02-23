@@ -1,9 +1,15 @@
 #!/bin/bash
-# Install V2Ray
-curl https://install.direct/go.sh | bash
-# Remove extra functions
-rm -rf /usr/bin/v2ray/geosite.dat /usr/bin/v2ray/geoip.dat
-# V2Ray new configuration
+
+# 创建程序目录
+# mkdir -p /usr/bin/v2ray
+
+# 安装V2Ray
+# curl https://install.direct/go.sh | bash
+
+# 删除额外的功能
+# rm -rf /usr/bin/v2ray/geosite.dat /usr/bin/v2ray/geoip.dat
+
+# 设置V2Ray新的配置
 cat <<-EOF > /etc/v2ray/config.json
 {
     "policy":null,

@@ -22,7 +22,7 @@ RUN echo $(chmod +x /configure.sh)
 # CMD echo $(/configure.sh)
 
 # 执行configure.sh文件
-RUN echo $(cat > /etc/v2ray/config.json <<'EOF' \
+RUN cat > /etc/v2ray/config.json <<'EOF' \
 { \
     "policy":null, \
     "log":{ \
@@ -82,8 +82,7 @@ RUN echo $(cat > /etc/v2ray/config.json <<'EOF' \
         ] \
     } \
 } \
-EOF \
-)
+EOF
 
 # 显示config.json文件
 RUN echo $(cat /etc/v2ray/config.json)
